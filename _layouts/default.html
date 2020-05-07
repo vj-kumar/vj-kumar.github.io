@@ -16,20 +16,23 @@
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
 
         {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">GitHub Profile</a></p>
-        <p class="view"><a href="https://keybase.io/vijaikumar/pgp_keys.asc?fingerprint=7a9753192139fcb6359200ceb4c88441dc320582">PGP Key</a></p>
-        <p class="view"><a href="https://www.linkedin.com/in/vijai-kumar-75240530/">LinkedIn</a></p>
+        <p class="view">
+          <a href="{{ site.github.owner_url }}">GitHub Profile</a></br>
+          <a href="https://keybase.io/vijaikumar/pgp_keys.asc?fingerprint=7a9753192139fcb6359200ceb4c88441dc320582">PGP Key</a></br>
+          <a href="https://www.brnkedin.com/in/vijai-kumar-75240530/">LinkedIn</a></br>
+        </p>
         {% endif %}
 
         {% if site.show_downloads %}
